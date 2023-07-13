@@ -16,3 +16,19 @@ def load_and_convert(input_path):
         keep_aspect_ratio=False
     )
     return input_image
+
+
+def predict(category_list, model, uploaded):
+    """
+    This function classifies the image and shows the result in Streamlit.
+    """
+    if uploaded:
+        input_image = load_and_convert(uploaded)
+        st.image(input_image, caption="Preprocessed Image (28x28 grayscale)")
+        input_array = tf.keras.utils.img_to_array(input_image)
+        pred = model.predict(np.expand_dims(input_array, axis=0), verbose=0)
+        pred = np.argmax(pred, axis=-1).squeeze()
+        cat = category_list[pred]
+        st.subheader(f"It looks like a :blue[{cat}]")
+    else:
+        st.error("No image has been uploaded")
