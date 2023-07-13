@@ -49,3 +49,18 @@ def text_block():
     st.text("Categories: T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot")
     st.text("Note: The input image will be preprocessed as a 28x28 grayscale image.")
     st.text("")
+
+
+def main():
+    category_list = [
+        "T-shirt/top", "Trouser", "Pullover", "Dress", "Coat",
+        "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot"
+    ]
+    model = download_model("model/mnist_fashion_saved_model")
+    text_block()
+    uploaded = st.file_uploader("Upload an image", type=['png', 'jpeg', 'jpg'])
+    st.button("Classify", on_click=predict, args=(category_list, model, uploaded))
+
+
+if __name__ == '__main__':
+    main()
