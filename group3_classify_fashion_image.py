@@ -32,3 +32,20 @@ def predict(category_list, model, uploaded):
         st.subheader(f"It looks like a :blue[{cat}]")
     else:
         st.error("No image has been uploaded")
+
+
+def download_model(path):
+    """
+    Download the pre-trained model.
+    """
+    model = tf.keras.models.load_model(path)
+    return model 
+
+
+def text_block():
+    st.title("Classify Fashion Item from Image")
+    st.text("")
+    st.text("This app predicts the fashion category of an input image.")
+    st.text("Categories: T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot")
+    st.text("Note: The input image will be preprocessed as a 28x28 grayscale image.")
+    st.text("")
