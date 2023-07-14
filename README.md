@@ -1,54 +1,43 @@
-# Fashion Item Classification App
-This Python project is a simple web application built using Streamlit that allows you to classify fashion items based on input images. The app uses a pre-trained TensorFlow model to perform the classification. 
-#### The project is available
- [Fashion Item Classification App](https://awesomemimiprojectdl2.streamlit.app/)
+## AASD4015 - Advance Applied Mathematical Concepts for Deep Learning
 
+# Mini Project 2 - Fashion Item Classification App
 
-Here's how the app works:
+## Group 3:
+* Thien An Trinh
+* Roman Burekhin
+* Athira Devan
+* Lester Azinge
 
-## Installation
-1. Create virtual environment (it needs for library consistency). 
-```sh
-python -m venv venv
-```
-2. Activate virtual environment
-```sh
-source venv/Scripts/activate 
-```
-3. To run this project, you need to have the following dependencies installed:
-- streamlit
-- tensorflow
-- numpy
+## Overview
+This project is a simple Streamlit web application that classifies input images into fashion items. The app uses a pre-trained TensorFlow convolutional neural network (CNN) model to perform the classification. 
 
-You can install the dependencies by running the following command:
-```sh
-pip install -r requirements.txt
-```
+The output of the classification is one of the following fashion categories: `T-shirt/top`, `Trouser`, `Pullover`, `Dress`, `Coat`, `Sandal`, `Shirt`, `Sneaker`, `Bag`, `Ankle boot`.
 
-## Usage
-To use the Fashion Item Classification App, follow these steps:
-1. Run the Python script or execute the code in a Python environment.
-```sh
-streamlit run group3_classify_fashion_image.py 
-```
-2. The app will launch in your web browser.
-3. The app provides a brief description of its functionality and the categories it can classify.
-4. Upload an image by clicking on the "Upload an image" button and selecting an image file (PNG, JPEG, or JPG). You can use eimage example in images foler
-5. Click the "Classify" button to perform the classification.
-6. The app will display the preprocessed image, the predicted fashion category, and the corresponding label for the uploaded image.
+## App usage
+1. Click on this [link](link) to go to the app. It may take a while to initiate for the first time.
 
-## Example
-**Inpit**
+2. The app provides a brief description of its functionalites and the categories it can classify.  
 
-![alt text](images/7-2-dress-shirt-png-hd.png)
+![app interface](usage_images/step2.png)
 
-**Output**
+3. Upload an image (PNG, JPEG, or JPG) to be classified using the **Browse files** button, or just drag and drop. You can use the image in the `sample image` folder in the [original repo](https://github.com/ThienAnTrinh/group3_miniproject2).
 
-![alt text](images/screeen_reult.PNG)
+4. After the image has been uploaded, click the **Classify** button  
 
+![image uploaded](usage_images/step4.png)
 
-## Additional Information
-- The **load_and_convert** function loads an image, converts it to grayscale, and resizes it to a size of 28x28 pixels. This preprocessing step ensures compatibility with the trained model.
-- The **predict** function performs the classification by feeding the preprocessed image to the model and extracting the predicted category. It displays the preprocessed image, the predicted category, and the corresponding label using the Streamlit framework.
+5. The model will generate the *preprocessed grayscale image* and the *predicted category* at the top of the screen.  
 
-Enjoy using the Fashion Item Classification App!
+![classified](usage_images/step5.png)
+
+6. If no image has been uploaded, the app will show an error message.  
+
+![error](usage_images/step6.png)
+
+## Additional information
+* Python version: 3.10
+* SSL error on Mac: open a terminal and run `/Applications/Python\ 3.10/Install\ Certificates.command`
+* The **load_and_convert** function loads an image, converts it to grayscale, and resizes it to a size of 28x28 pixels. This preprocessing step ensures compatibility with the trained model.
+* The **predict** function performs the classification by feeding the preprocessed image to the model and extracting the predicted category. It displays the preprocessed image and the predicted category on the Streamlit app.
+
+### Enjoy using the Fashion Item Classification App!
