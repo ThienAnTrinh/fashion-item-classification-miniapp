@@ -14,7 +14,7 @@ This project is a simple Streamlit web application that classifies input images 
 The output of the classification is one of the following fashion categories: `T-shirt/top`, `Trouser`, `Pullover`, `Dress`, `Coat`, `Sandal`, `Shirt`, `Sneaker`, `Bag`, `Ankle boot`.
 
 ## App usage
-1. Click on this [link](link) to go to the app. It may take a while to initiate for the first time.
+1. Click on this [link](https://fashionimageclassification.streamlit.app/) to go to the app. It may take a while to initiate for the first time.
 
 2. The app provides a brief description of its functionalites and the categories it can classify.  
 
