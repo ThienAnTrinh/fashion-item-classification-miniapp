@@ -1,8 +1,6 @@
-## AASD4015 - Advance Applied Mathematical Concepts for Deep Learning
+# Mini Project - Fashion Item Classification App
 
-# Mini Project 2 - Fashion Item Classification App
-
-## Group 3:
+## Contributors:
 * Thien An Trinh
 * Roman Burekhin
 * Athira Devan
